@@ -1,7 +1,8 @@
 ---
 import Welcome from '../components/Welcome.astro';
-import Skills from '../components/Skills.astro';
+import Experience from '../components/Experience.astro';
 import Layout from '../layouts/Layout.astro';
+import SobreMi from '../components/SobreMi.astro';
 import AsciiBackground from '../components/AsciiBackground.vue';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -11,5 +12,6 @@ import AsciiBackground from '../components/AsciiBackground.vue';
 <Layout>
 	<AsciiBackground client:only="vue" />
 	<Welcome />
-	<Skills />
+	<SobreMi />
+	<Experience />
 </Layout>

@@ -1,0 +1,99 @@
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<main class="sobremi-seccion relative z-10 w-full min-h-screen flex flex-col items-center justify-around p-8 overflow-x-hidden">
+    <div class="text-center text-[#fff] max-w-2xl">
+        <h1 class="text-6xl font-bold drop-shadow-lg select-none">
+            SOBRE MI
+        </h1>
+        <p>
+            <br/>
+            <h2 class="font-bold; uppercase"><u>Hola, soy Gilbert</u></h2><br/>
+            Soy un desarrollador full stack dedicado y apasionado, con un gran interes
+            en el desarrollo web. Me gusta la innovacion ya sea con nuevas tecnologias 
+            o ingeniar cosas para sistemas ya existentes. Si tuviera que definirme en 3 
+            palabras seria: dedicacion, responsabilidad y curiosidad. 
+        </p>
+    </div>
+    <div class="text-center text-[#fff] w-full">
+        <h1 class="text-6xl font-bold drop-shadow select-none">
+            SKILLS
+        </h1>
+        <div class="wrapper w-full flex mt-10">
+            <div class="box" data-tooltip="HTML5"><Icon name="html5"/></div>
+            <div class="box" data-tooltip="CSS"><Icon name="css"/></div>
+            <div class="box" data-tooltip="JAVASCRIPT"><Icon name="javascript"/></div>
+            <div class="box" data-tooltip="TAILWIND"><Icon name="tailwindcss"/></div>
+            <div class="box" data-tooltip="PHP"><Icon name="php"/></div>
+            <div class="box" data-tooltip="REACT"><Icon name="react"/></div>
+            <div class="box" data-tooltip="PYTHON"><Icon name="python"/></div>
+            <div class="box" data-tooltip="NODEJS"><Icon name="nodejs"/></div>
+            <div class="box" data-tooltip="JAVA"><Icon name="java"/></div>
+            <div class="box" data-tooltip="MYSQL"><Icon name="mysql"/></div>
+            <div class="box" data-tooltip="POSTGRESQL"><Icon name="postgresql"/></div>
+        </div>
+    </div>
+</main>
+<script src="./utils/infiniyCarousel.js"></script>
+<script src="./utils/gsapUtils.js"></script>
+<style>
+    .sobremi-seccion::before {
+        content: '';
+        position: absolute;
+        top: 20%;
+        left: 0;
+        width: 100vw;
+        height: 200px;
+        background-color: #ffab00;
+        opacity: 0.5;
+        transform: translateX(var(--rect-x-position)) rotate(-2deg);
+        z-index: -1;
+    }
+    .box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem;
+        flex-shrink: 0;
+        height: 100%;
+        width: 20%;
+        position: relative;
+    }
+    .box svg {
+        width: 80px;
+        height: 80px;
+        cursor: pointer;
+    }
+    .carousel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, .8);
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 5px;
+        font-size: 14px;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
+    }
+    .box:has(svg:hover)::after {
+        opacity: 1;
+        visibility: visible;
+    }
+
+</style>

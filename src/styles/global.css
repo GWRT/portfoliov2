@@ -1,18 +1,56 @@
 @import "tailwindcss";
 
-html, body {
+html {
   height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar {
+  display: none;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+body {
+  height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  overflow-y: auto;
   background-color: black;
-  scroll-behavior: smooth;
-  position: relative; /* Asegura que el posicionamiento sea correcto */
+  position: relative;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 /* Asegura que los elementos interactivos tengan prioridad sobre el fondo */
 button, a, input, textarea, select, [role="button"] {
   position: relative;
   z-index: 20;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }

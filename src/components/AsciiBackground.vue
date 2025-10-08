@@ -52,7 +52,7 @@ export default {
       scene.background = new THREE.Color(0, 0, 0);
 
       const textureLoader = new THREE.TextureLoader();
-      textureLoader.load('/img1024.png', (texture) => {
+      textureLoader.load('/blackhole.png', (texture) => {
         const geometry = new THREE.PlaneGeometry(1500, 1500);
         const material = new THREE.MeshBasicMaterial({ 
           map: texture,
