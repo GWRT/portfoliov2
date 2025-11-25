@@ -10,20 +10,23 @@ document.addEventListener("DOMContentLoaded", () => {
         ScrollTrigger.refresh();
     }, 100);
     
+    const scrollTriggerConfig = {
+        trigger: ".sobremi-seccion",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+        //markers: true,
+    };
+    
+    // Animar el rectángulo
     gsap.fromTo(".sobremi-seccion", 
         { 
-            '--rect-x-position': '-100%' 
+            '--rect-x-position': '-170%'
         },
         { 
-            '--rect-x-position': '100%',
+            '--rect-x-position': '170%',
             ease: "none",
-            scrollTrigger: {
-                trigger: ".sobremi-seccion",
-                start: "top bottom",
-                end: "bottom top",
-                scrub: true,
-                markers: true,
-            }
+            scrollTrigger: scrollTriggerConfig
         }
     );
 });
