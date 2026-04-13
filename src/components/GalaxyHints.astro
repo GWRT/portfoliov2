@@ -1,0 +1,42 @@
+<div class="fixed bottom-6 left-6 z-50 pointer-events-none select-none flex flex-col gap-2">
+    <!-- Click para mover -->
+    <div
+        class="flex items-center gap-3 px-3 py-2 rounded-xl bg-[var(--c-glass)] border border-[var(--c-glass-border)] backdrop-blur-sm"
+    >
+        <svg width="18" height="26" viewBox="0 0 18 26" fill="none" xmlns="http://www.w3.org/2000/svg" class="shrink-0">
+            <rect x="1" y="1" width="16" height="24" rx="8" stroke="rgba(255,171,0,0.45)" stroke-width="1.5"></rect>
+            <path d="M1.5 9C1.5 5.41 4.41 2 8 2H9V13H1.5V9Z" fill="rgba(255,171,0,0.65)" rx="7"></path>
+            <line x1="9" y1="1.5" x2="9" y2="13" stroke="rgba(255,171,0,0.4)" stroke-width="1"></line>
+            <rect x="7" y="16" width="4" height="6" rx="2" fill="rgba(255,171,0,0.28)"></rect>
+        </svg>
+        <span class="text-white/55 text-[11px] font-mono leading-tight">
+            Clic y arrastrar<br />
+            <span class="text-[var(--c-accent-light)] opacity-80">mover galaxia</span>
+        </span>
+    </div>
+
+    <!-- Ctrl + scroll para zoom -->
+    <div
+        class="flex items-center gap-3 px-3 py-2 rounded-xl bg-[var(--c-glass)] border border-[var(--c-glass-border)] backdrop-blur-sm"
+    >
+        <div class="flex items-center gap-1 shrink-0">
+            <span
+                class="inline-flex items-center justify-center h-5 px-1.5 rounded border border-[rgba(255,171,0,0.4)] bg-[rgba(255,171,0,0.08)] text-[var(--c-accent)] text-[9px] font-mono leading-none"
+            >
+                Ctrl
+            </span>
+            <span class="text-white/30 text-[10px]">+</span>
+            <svg width="18" height="26" viewBox="0 0 18 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="1" y="1" width="16" height="24" rx="8" stroke="rgba(255,171,0,0.45)" stroke-width="1.5"></rect>
+                <line x1="9" y1="1.5" x2="9" y2="13" stroke="rgba(255,171,0,0.2)" stroke-width="1"></line>
+                <rect x="7" y="5" width="4" height="7" rx="2" fill="rgba(255,171,0,0.75)"></rect>
+                <path d="M9 4 L7.5 5.8 L10.5 5.8 Z" fill="rgba(255,209,102,0.9)"></path>
+                <path d="M9 13 L7.5 11.2 L10.5 11.2 Z" fill="rgba(255,209,102,0.9)"></path>
+            </svg>
+        </div>
+        <span class="text-white/55 text-[11px] font-mono leading-tight">
+            Rueda del ratón<br />
+            <span class="text-[var(--c-accent-light)] opacity-80">zoom</span>
+        </span>
+    </div>
+</div>

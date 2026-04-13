@@ -12,7 +12,7 @@ export default defineConfig({
     
     server: {
       watch: {
-        usePolling: true, // Útil en entornos como WSL2 o Docker
+        usePolling: true,
       },
     },
     plugins: [tailwindcss()],

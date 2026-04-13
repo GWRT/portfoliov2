@@ -1,0 +1,23 @@
+/*
+ *   Principal - Amber #ffab00
+ *   Análogo - Orange #ff7c20
+ *   Claro - Gold #ffd166
+ */
+
+:root {
+    --c-accent: #ffab00;
+    --c-accent-light: #ffd166;
+    --c-accent-warm: #ff7c20;
+    --c-accent-glow: rgba(255, 171, 0, 0.22);
+    --c-accent-glow-strong: rgba(255, 171, 0, 0.45);
+
+    --c-void: #0e0800;
+    --c-glass: rgba(18, 11, 0, 0.74);
+    --c-glass-hover: rgba(32, 20, 0, 0.88);
+    --c-glass-border: rgba(255, 171, 0, 0.14);
+    --c-glass-border-hover: rgba(255, 171, 0, 0.65);
+
+    --c-text: #ffffff;
+    --c-text-muted: rgba(255, 255, 255, 0.62);
+    --c-text-dim: rgba(255, 255, 255, 0.32);
+}

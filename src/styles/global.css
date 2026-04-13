@@ -1,56 +1,70 @@
 @import "tailwindcss";
+@import "./theme.css";
 
 html {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 html::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 html.lenis {
-  height: auto;
+    height: auto;
 }
 
 .lenis.lenis-smooth {
-  scroll-behavior: auto;
+    scroll-behavior: auto;
 }
 
 .lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
+    overscroll-behavior: contain;
 }
 
 .lenis.lenis-stopped {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .lenis.lenis-scrolling iframe {
-  pointer-events: none;
+    pointer-events: none;
 }
 
 body {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  background-color: black;
-  position: relative;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: black;
+    position: relative;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    font-family: "Courier New", Courier, monospace;
 }
 
-/* Asegura que los elementos interactivos tengan prioridad sobre el fondo */
-button, a, input, textarea, select, [role="button"] {
-  position: relative;
-  z-index: 20;
+button,
+a,
+input,
+textarea,
+select,
+[role="button"] {
+    position: relative;
+    z-index: 20;
 }
 
 body::-webkit-scrollbar {
-  display: none;
+    display: none;
+}
+
+.section-title {
+    color: #ffffff;
+    text-shadow:
+        0 0 18px rgba(255, 171, 0, 0.55),
+        0 0 40px rgba(255, 171, 0, 0.2);
+    letter-spacing: 0.08em;
 }

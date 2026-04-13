@@ -1,47 +1,55 @@
 ---
-import { Icon } from "astro-icon/components"
+import { Icon } from "astro-icon/components";
 ---
 
 <main class="relative z-10 w-full min-h-screen flex items-center justify-center p-8">
-	<div class="flex flex-col text-center justify-center items-center text-[#fff] max-w-2xl">
-		<h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg leading-tight select-none">
-			GILBERT WIL RAMOS TICONA
-		</h1>
-		<p class="text-xl md:text-2xl mb-8 opacity-90 drop-shadow-md select-none">
-			<u>DESARROLLADOR FULL STACK</u>
-		</p>
-		<div class="flex mb-12 justify-center items-baseline text-lg opacity-80 drop-shadow-md select-none">
-			<span>Principales Tecnologias:&nbsp;</span>
-			<div class="relative">
-				<p class="word-3d-tech"></p>
-				<span class="stick"></span>
-			</div>
-		</div>
-		<div class="flex flex-col w-1/3 justify-center flex-wrap">
-			<button class="px-8 py-3 bg-white/20 text-white border-2 border-[#ffab00] rounded-lg font-semibold backdrop-blur-md hover:bg-white/30 hover:border-[#ffab00]/50 hover:-translate-y-1 transition-all duration-300 cursor-pointer">
-				Descargar CV
-			</button>
-			<div class="mediaIcons flex justify-around mt-10">
-				<Icon name="linkedin" />
-				<Icon name="github" />
-				<Icon name="mail" />
-			</div>
-		</div>
-	</div>
+    <div class="flex flex-col text-center justify-center items-center text-[#fff] max-w-2xl">
+        <h1 class="text-5xl md:text-6xl font-bold mb-4 drop-shadow-lg leading-tight select-none">
+            GILBERT WIL RAMOS TICONA
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 opacity-90 drop-shadow-md select-none">
+            <u>DESARROLLADOR FULL STACK</u>
+        </p>
+        <div class="flex mb-12 justify-center items-baseline text-lg opacity-80 drop-shadow-md select-none">
+            <span>Principales Tecnologias:&nbsp;</span>
+            <div class="relative">
+                <p class="word-3d-tech"></p>
+                <span class="stick"></span>
+            </div>
+        </div>
+        <div class="flex flex-col w-1/3 justify-center flex-wrap">
+            <button
+                class="px-8 py-3 bg-white/20 text-white border-2 border-[#ffab00] rounded-lg font-semibold backdrop-blur-md hover:bg-white/30 hover:border-[#ffab00]/50 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+            >
+                Descargar CV
+            </button>
+            <div class="mediaIcons flex justify-around mt-10">
+                <a href="https://www.linkedin.com/in/gramost" target="_blank" rel="noopener">
+                    <Icon name="linkedin" />
+                </a>
+                <a href="https://github.com/GWRT" target="_blank" rel="noopener">
+                    <Icon name="github" />
+                </a>
+                <a href="mailto:gramosti20@gmail.com" target="_blank" rel="noopener noreferrer">
+                    <Icon name="mail" />
+                </a>
+            </div>
+        </div>
+    </div>
 </main>
 <script src="./utils/typedMessage.js"></script>
 <style>
-	.mediaIcons svg{
+    .mediaIcons svg {
         width: 40px;
-		height: 40px;
-		cursor: pointer;
-	}
-	.stick {
-		animation: blink .8s steps(1) infinite;
-	}
-	@keyframes blink {
-		50% {
-			opacity: 0;
-		}
-	}
+        height: 40px;
+        cursor: pointer;
+    }
+    .stick {
+        animation: blink 0.8s steps(1) infinite;
+    }
+    @keyframes blink {
+        50% {
+            opacity: 0;
+        }
+    }
 </style>

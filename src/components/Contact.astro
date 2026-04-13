@@ -1,0 +1,94 @@
+<section class="contact-seccion relative z-10 w-full min-h-screen flex flex-col items-center justify-center px-6 py-24">
+    <h2 class="section-title text-6xl font-bold drop-shadow-lg select-none mb-4">CONTACTO</h2>
+    <p class="text-white text-sm mb-12 tracking-wide">¿Tienes un proyecto en mente? Escríbeme.</p>
+
+    <div
+        class="contact-card w-full max-w-2xl rounded-2xl border border-[var(--c-glass-border)] bg-[var(--c-glass)] backdrop-blur-md p-8"
+    >
+        <form id="contact-form" novalidate>
+            <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                <div class="flex flex-col gap-1.5">
+                    <label for="cf-name" class="text-white/75 text-[11px] uppercase tracking-widest"> Nombre </label>
+                    <input
+                        id="cf-name"
+                        name="name"
+                        type="text"
+                        placeholder="Tu nombre"
+                        class="cf-input bg-[rgba(255,171,0,0.05)] border border-[var(--c-glass-border)] rounded-lg px-4 py-2.5 text-white text-sm placeholder:text-white/30 outline-none focus:border-[var(--c-accent)] focus:bg-[rgba(255,171,0,0.08)] transition-colors"
+                    />
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <label for="cf-email" class="text-white/75 text-[11px] uppercase tracking-widest">
+                        Correo <span class="text-[var(--c-accent)]">*</span>
+                    </label>
+                    <input
+                        id="cf-email"
+                        name="email"
+                        type="email"
+                        required
+                        placeholder="tu@correo.com"
+                        class="cf-input bg-[rgba(255,171,0,0.05)] border border-[var(--c-glass-border)] rounded-lg px-4 py-2.5 text-white text-sm placeholder:text-white/30 outline-none focus:border-[var(--c-accent)] focus:bg-[rgba(255,171,0,0.08)] transition-colors"
+                    />
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-1.5 mb-4">
+                <label for="cf-subject" class="text-white/75 text-[11px] uppercase tracking-widest">
+                    Asunto <span class="text-[var(--c-accent)]">*</span>
+                </label>
+                <input
+                    id="cf-subject"
+                    name="subject"
+                    type="text"
+                    required
+                    placeholder="¿De qué quieres hablar?"
+                    class="cf-input bg-[rgba(255,171,0,0.05)] border border-[var(--c-glass-border)] rounded-lg px-4 py-2.5 text-white text-sm placeholder:text-white/30 outline-none focus:border-[var(--c-accent)] focus:bg-[rgba(255,171,0,0.08)] transition-colors"
+                />
+            </div>
+
+            <div class="flex flex-col gap-1.5 mb-6">
+                <label for="cf-message" class="text-white/75 text-[11px] uppercase tracking-widest">
+                    Mensaje <span class="text-[var(--c-accent)]">*</span>
+                </label>
+                <textarea
+                    id="cf-message"
+                    name="message"
+                    required
+                    rows="7"
+                    placeholder="Cuéntame sobre tu proyecto, idea o consulta..."
+                    class="cf-input resize-none bg-[rgba(255,171,0,0.05)] border border-[var(--c-glass-border)] rounded-lg px-4 py-3 text-white text-sm placeholder:text-white/30 outline-none focus:border-[var(--c-accent)] focus:bg-[rgba(255,171,0,0.08)] transition-colors leading-relaxed"
+                ></textarea>
+            </div>
+
+            <div class="flex items-center justify-between gap-4 flex-wrap">
+                <p id="cf-feedback" class="text-sm hidden"></p>
+                <button
+                    type="submit"
+                    id="cf-submit"
+                    class="ml-auto flex items-center gap-2 px-6 py-2.5 rounded-lg bg-[var(--c-accent)] text-black font-bold text-sm tracking-wide hover:bg-[var(--c-accent-light)] active:scale-95 transition-all duration-150 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                    <span id="cf-btn-text">Enviar mensaje</span>
+                    <svg id="cf-spinner" class="hidden animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"
+                        ></circle>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path>
+                    </svg>
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<script src="./utils/contactForm.js"></script>
+
+<style>
+    .contact-seccion::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse 70% 50% at 50% 100%, rgba(255, 171, 0, 0.06) 0%, transparent 70%);
+        pointer-events: none;
+    }
+</style>

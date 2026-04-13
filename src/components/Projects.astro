@@ -1,0 +1,199 @@
+---
+import { projectsList } from "./constants/projectsList";
+---
+
+<section class="projects-outer relative z-10 w-full min-h-[150vh] flex flex-col items-center justify-around p-8">
+    <div class="text-center text-white max-w-4xl mb-50 w-full">
+        <h2 class="section-title text-4xl md:text-5xl font-bold mb-10 drop-shadow-lg">EXPERIENCIA</h2>
+        <section class="projects-section flex justify-center text-left text-white">
+            <ul class="experience-timeline">
+                <li class="experience-item relative flex gap-6 pb-5 items-baseline">
+                    <div
+                        class="before:absolute before:left-[5.5px] before:h-full before:w-[1px] before:bg-[var(--c-accent)]"
+                    >
+                        <svg
+                            height="12"
+                            width="12"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="bi bi-circle-fill fill-[var(--c-accent)]"
+                            viewBox="0 0 16 16"
+                        >
+                            <circle r="8" cx="8" cy="8"></circle>
+                        </svg>
+                    </div>
+                    <div class="text-1xl">
+                        <p class="font-bold text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.5)]">
+                            Programador Full Stack — <span
+                                class="text-[var(--c-accent-light)] [text-shadow:0_1px_3px_rgba(0,0,0,0.5)]"
+                                >IUVADE</span>
+                        </p>
+                        <p class="text-white/70 text-sm [text-shadow:0_1px_3px_rgba(0,0,0,0.5)]">
+                            Octubre 2024 - Actualidad
+                        </p>
+                        <p class="mt-2 text-white/80 [text-shadow:0_1px_3px_rgba(0,0,0,0.5)]">
+                            Desarrolle nuevas funciones para los diferentes aplicaciones de la empresa, como son Moodle,
+                            PIDE (Plataforma de Interoperabilidad del Perú), Geolocalizacion, Pasarela de Pago, Firma
+                            Digital, etc. También trabaje en las actualizaciones, mantenimiento, correcciones y mejoras
+                            al software existente.
+                        </p>
+                    </div>
+                </li>
+                <li class="experience-item relative flex gap-6 pb-5 items-baseline">
+                    <div>
+                        <svg
+                            height="12"
+                            width="12"
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="bi bi-circle-fill fill-[var(--c-accent)]"
+                            viewBox="0 0 16 16"
+                        >
+                            <circle r="8" cx="8" cy="8"></circle>
+                        </svg>
+                    </div>
+                    <div class="text-1xl">
+                        <p class="font-bold text-white [text-shadow:0_1px_3px_rgba(0,0,0,0.5)]">
+                            Programador Full Stack — <span
+                                class="text-[var(--c-accent-light)] [text-shadow:0_1px_3px_rgba(0,0,0,0.5)]"
+                                >CARIP</span>
+                        </p>
+                        <p class="text-white/70 text-sm [text-shadow:0_1px_3px_rgba(0,0,0,0.5)]">
+                            Abril 2023 - Febrero 2024
+                        </p>
+                        <p class="mt-2 text-white/80 [text-shadow:0_1px_3px_rgba(0,0,0,0.5)]">
+                            Fui el encargado de la integración del Frontend y Backend y su correcto funcionamiento,
+                            además de ser programador asistente en el Frontend y hacer documentación del sistema.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <div class="text-center text-white max-w-4xl w-full">
+        <h2 class="section-title text-4xl md:text-5xl font-bold mb-8 drop-shadow-lg">PROYECTOS</h2>
+        <div class="project-cards-grid columns-1 sm:columns-2 gap-6">
+            {
+                projectsList.map((project, idx) => (
+                    <article
+                        class={`project-card break-inside-avoid mb-6 p-6 rounded-xl ${idx === 0 ? "featured" : ""}`}
+                    >
+                        {project.image && (
+                            <img
+                                src={typeof project.image === "string" ? project.image : project.image.src}
+                                alt={project.title}
+                                class="w-full h-40 object-cover rounded-lg mb-4 opacity-85"
+                            />
+                        )}
+                        <h3 class="text-xl font-semibold mb-2 text-white">{project.title}</h3>
+                        <p class="mb-4 text-sm sm:text-base text-[var(--c-text-muted)]">{project.content}</p>
+                        <div class="flex flex-wrap gap-3 mb-4 items-center">
+                            {project.techIcons?.map((tech) => (
+                                <span
+                                    title={tech.label}
+                                    class="h-5 w-5 opacity-80"
+                                    style={{
+                                        maskImage: `url(${tech.svg})`,
+                                        WebkitMaskImage: `url(${tech.svg})`,
+                                        backgroundColor: (tech as any).color ?? "#fff",
+                                        maskRepeat: "no-repeat",
+                                        WebkitMaskRepeat: "no-repeat",
+                                        maskSize: "contain",
+                                        WebkitMaskSize: "contain",
+                                    }}
+                                />
+                            ))}
+                        </div>
+                        <div class="flex flex-wrap gap-4 items-center text-sm">
+                            {project.links?.map((link) => (
+                                <a
+                                    href={link.href}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    class="project-link flex items-center gap-2"
+                                >
+                                    {link.icon && (
+                                        <span
+                                            title={link.label}
+                                            class="h-4 w-4 inline-block"
+                                            style={{
+                                                maskImage: `url(${link.icon})`,
+                                                WebkitMaskImage: `url(${link.icon})`,
+                                                backgroundColor: (link as any).color ?? "#fff",
+                                                maskRepeat: "no-repeat",
+                                                WebkitMaskRepeat: "no-repeat",
+                                                maskSize: "contain",
+                                                WebkitMaskSize: "contain",
+                                            }}
+                                            aria-hidden="true"
+                                        />
+                                    )}
+                                    <span>{link.label}</span>
+                                </a>
+                            ))}
+                        </div>
+                    </article>
+                ))
+            }
+        </div>
+    </div>
+</section>
+
+<script src="./utils/gsapUtils.js"></script>
+
+<style>
+    .projects-section::before {
+        content: "";
+        position: absolute;
+        top: 2%;
+        left: 0;
+        width: 100vw;
+        height: 350px;
+        background-color: var(--c-accent);
+        opacity: 0.8;
+        transform: translateX(var(--rect-x-position)) rotate(2deg);
+        z-index: -1;
+        pointer-events: none;
+    }
+
+    .project-card {
+        background: var(--c-glass);
+        border: 1px solid var(--c-glass-border);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        color: var(--c-text);
+        transition:
+            transform 0.3s ease,
+            border-color 0.3s ease,
+            box-shadow 0.3s ease,
+            background 0.3s ease;
+    }
+
+    .project-card:hover {
+        transform: scale(1.02) translateY(-2px);
+        border-color: var(--c-glass-border-hover);
+        background: var(--c-glass-hover);
+        box-shadow:
+            0 0 28px var(--c-accent-glow),
+            0 12px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .project-card.featured {
+        border-top: 3px solid var(--c-accent);
+        column-span: all;
+    }
+
+    @media (min-width: 640px) {
+        .project-card.featured {
+            width: 100%;
+        }
+    }
+
+    .project-link {
+        color: var(--c-accent-light);
+        text-decoration: none;
+        transition: color 0.2s ease;
+    }
+    .project-link:hover {
+        color: var(--c-accent-warm);
+    }
+</style>
